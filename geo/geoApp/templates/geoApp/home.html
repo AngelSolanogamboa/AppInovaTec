@@ -1,0 +1,72 @@
+{% load static %}
+ 
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+ 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+ 
+  <title>GeoGida</title>
+ 
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="{% static '/bootstrap/css/bootstrap.min.css' %}">
+  <style>
+    #map-container {
+        width: 700px;
+        height: 600px;
+        margin: 0 auto; 
+    }
+</style>
+ 
+</head>
+ 
+<body>
+ 
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">TuxRuta</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="">Bienvenidos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+ 
+  <!-- Page Content -->
+  <div class="container">
+    <div class="row">
+ 
+      <div class="col-lg-12 text-center">
+        <h3 class="mt-5">TecNM campus Tuxtla Gutierrez, Chiapaz</h3>
+        
+        <div id="map-container"> <!-- Ajusta el ancho y alto según tu preferencia -->
+          {{ my_map | safe }}
+        </div>
+        {% comment %} {{ my_map|safe }} {% endcomment %}
+
+        <ul class="list-unstyled">
+          <li>TecNM</li>
+          <li>2024</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static '/jquery/jquery.slim.min.js' %}"></script>
+  <script src="{% static '/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+ 
+</body>
+ 
+</html>
